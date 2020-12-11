@@ -1,0 +1,58 @@
+.parent {
+    width: 100%; 
+    height: 100%;
+}
+  
+.child {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* fallback color */
+    background-image: url("../../assets/OldNewsPaper.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.parent:hover .child, .parent:focus .child {
+    -ms-transform: scale(2.0);
+    -moz-transform: scale(2.0);
+    -webkit-transform: scale(2.0);
+    -o-transform: scale(2.0);
+    transform: scale(2.0);
+    transition: all .5s;
+}
+
+.content {
+    display: none;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+.parent:hover .content,
+.parent:focus .content {
+    display: block;
+}
+
+.line-1{
+    position: relative;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}

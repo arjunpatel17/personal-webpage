@@ -1,0 +1,28 @@
+.menubar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.content {
+    .section {
+        margin-top: 25px;
+        .card {
+            width: 40%;
+        }
+    }
+    .profile {
+        display: flex;
+        justify-content: space-around;
+    }
+    .projects {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        .card {
+            margin-right: 25px;
+        }
+    }
+    .blogs {
+    }
+}
