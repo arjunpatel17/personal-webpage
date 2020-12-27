@@ -6,3 +6,68 @@ body {
     height: 100%;
     margin: 0px;
 }
+
+// Mobile
+@media (min-width: 300px) and (max-width: 500px) {
+    .fontSize {
+        font-size: 100%;
+    }
+
+    .content {
+        width: 34%;
+        top: 38%;
+        left: 41%;
+    }
+}
+
+// Tablet
+@media (min-width: 501px) and (max-width: 800px) {
+    .fontSize {
+        font-size: 100%;
+    }
+
+    .content {
+        width: 27%;
+        top: 40%;
+        left: 43%;
+    }
+}
+
+// Laptop Small
+@media (min-width: 801px) and (max-width: 1100px) {
+    .fontSize {
+        font-size: 100%;
+    }
+
+    .content {
+        width: 27%;
+        top: 40%;
+        left: 43%;
+    }
+}
+
+// Laptop Large
+@media (min-width: 1101px) and (max-width: 2000px) {
+    .fontSize {
+        font-size: 100%;
+    }
+
+    .content {
+        width: 19%;
+        top: 40%;
+        left: 45%;
+    }
+}
+
+// Laptop 4k
+@media (min-width: 2001px) and (max-width: 4100px) {
+    .fontSize {
+        font-size: 180%;
+    }
+
+    .content {
+        width: 19%;
+        top: 31%;
+        left: 44%;
+    }
+}

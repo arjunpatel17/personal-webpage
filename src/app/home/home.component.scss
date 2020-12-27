@@ -1,6 +1,7 @@
 .parent {
     width: 100%; 
     height: 100%;
+    overflow: hidden;
 }
   
 .child {
@@ -8,51 +9,68 @@
     width: 100%;
     height: 100%;
     background-color: black; /* fallback color */
-    background-image: url("../../assets/OldNewsPaper.jpg");
+    background-image: url("../../assets/LandingPaper.jpeg");
     background-position: center;
     background-size: cover;
 }
 
-.parent:hover .child, .parent:focus .child {
-    -ms-transform: scale(2.0);
-    -moz-transform: scale(2.0);
-    -webkit-transform: scale(2.0);
-    -o-transform: scale(2.0);
-    transform: scale(2.0);
-    transition: all .5s;
+.parent .child,
+.parent .child {
+    animation-name: landing;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
-.content {
-    display: none;
-    width: 30%;
-    height: 30%;
-    margin: auto;
+.parent .content,
+.parent .content {
+    animation-name: contentAnimation;
+    animation-timing-function: linear;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
 }
 
-.parent:hover .content,
-.parent:focus .content {
-    display: block;
-}
-
-.line-1{
+.line-1 {
     position: relative;
-    font-size: 180%;
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
     transform: translateY(-50%);    
 }
 
-/* Animation */
-.anim-typewriter{
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-               blinkTextCursor 500ms steps(44) infinite normal;
+@keyframes landing {
+    from{
+        filter: blur(0);
+    }
+    to{
+        transform: scale(2.0) translate(-4%, 5%) rotate(0.03turn);
+        filter: blur(4px);
+    }
 }
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 24em;}
+
+.content {
+    position: absolute;
+    height: 30%;
+    transform: rotate(-0.03turn);
 }
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+
+@keyframes contentAnimation {
+    from{
+        transform: scale(1.0) rotate(-0.03turn);
+    }
+    to{
+        transform: scale(2.0) rotate(0);
+    }
 }
+
+// /* Animation */
+// .anim-typewriter {
+//     animation: typewriter 4s steps(44) 1s 1 normal both,
+//                blinkTextCursor 500ms steps(44) infinite normal;
+// }
+// @keyframes typewriter{
+//     from{width: 0;}
+//     to{width: 24em;}
+// }
+// @keyframes blinkTextCursor{
+//     from{border-right-color: rgba(255,255,255,.75);}
+//     to{border-right-color: transparent;}
+// }
