@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent{
 
+  showChild: boolean = false;
+
   constructor(private router: Router) { }
 
-  buttonClick() {
-    this.router.navigate(['/profile', {}]);
+  onParentClick() {
+    this.showChild = true;
+    setTimeout(() => {
+      this.router.navigate(['/wanted', {}]);
+    }, 2000)
   }
 }

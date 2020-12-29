@@ -2,6 +2,10 @@
     width: 100%; 
     height: 100%;
     overflow: hidden;
+    background-color: black; /* fallback color */
+    background-image: url("../../assets/Oldwesttown.jpg");
+    background-position: center;
+    background-size: cover;
 }
   
 .child {
@@ -9,7 +13,7 @@
     width: 100%;
     height: 100%;
     background-color: black; /* fallback color */
-    background-image: url("../../assets/LandingPaper.jpeg");
+    background-image: url("../../assets/Oldwesttown.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -22,55 +26,12 @@
     animation-fill-mode: forwards;
 }
 
-.parent .content,
-.parent .content {
-    animation-name: contentAnimation;
-    animation-timing-function: linear;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
-}
-
-.line-1 {
-    position: relative;
-    text-align: center;
-    transform: translateY(-50%);    
-}
-
 @keyframes landing {
     from{
         filter: blur(0);
     }
     to{
-        transform: scale(2.0) translate(-4%, 5%) rotate(0.03turn);
+        transform: scale(5.0) translate(20%, -20%);
         filter: blur(4px);
     }
 }
-
-.content {
-    position: absolute;
-    height: 30%;
-    transform: rotate(-0.03turn);
-}
-
-@keyframes contentAnimation {
-    from{
-        transform: scale(1.0) rotate(-0.03turn);
-    }
-    to{
-        transform: scale(2.0) rotate(0);
-    }
-}
-
-// /* Animation */
-// .anim-typewriter {
-//     animation: typewriter 4s steps(44) 1s 1 normal both,
-//                blinkTextCursor 500ms steps(44) infinite normal;
-// }
-// @keyframes typewriter{
-//     from{width: 0;}
-//     to{width: 24em;}
-// }
-// @keyframes blinkTextCursor{
-//     from{border-right-color: rgba(255,255,255,.75);}
-//     to{border-right-color: transparent;}
-// }

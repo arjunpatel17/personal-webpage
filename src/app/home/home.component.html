@@ -1,8 +1,3 @@
-<div class="parent">
-    <div class="child"></div>
-    <div class="content fontSize">
-        <h1>Most Wanted</h1>
-        <p class="line-1 anim-typewriter">Arjun the Software Engineer!</p>
-        <button pButton label="(Continue to find out more about Arjun)" (click)="buttonClick()"></button>
-    </div>
+<div class="parent" (click)="onParentClick()">
+    <div *ngIf="showChild" class="child"></div>
 </div>
