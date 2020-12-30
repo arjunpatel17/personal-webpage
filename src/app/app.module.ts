@@ -11,13 +11,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WantedComponent } from './wanted/wanted.component';
+import { MainComponent } from './main/main.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    WantedComponent
+    WantedComponent,
+    MainComponent,
+    ExperienceComponent,
+    EducationComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
