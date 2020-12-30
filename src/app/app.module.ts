@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {MenubarModule} from 'primeng/menubar';
+import {MenuModule} from 'primeng/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +34,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AppRoutingModule,
     ButtonModule,
     CardModule,
-    MenubarModule
+    MenubarModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

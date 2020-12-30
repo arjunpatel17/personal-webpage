@@ -1,5 +1,5 @@
 .profile-page {
-    // background: url(./../../assets/Oldwesttown.jpg) no-repeat top center fixed;
+    background: url(./../../assets/Oldwesttown.jpg) no-repeat top center fixed;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -7,16 +7,24 @@
     overflow-y: auto;
 
     .menubar {
+        position: fixed; 
         display: flex;
-        justify-content: stretch;
+        justify-content: space-around;
         width: 100%;
+        height: 50px;
+        background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center;
+        background-size: cover;
+        align-items: center;
+
         button {
-            flex-grow: 1;
             color: black;
-            background: none;
+            background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center !important;
+            background-size: cover;
+            color: black;
             border-color: black;
             border-width: 2px;
             border-style: solid;
+            height: 40px;
 
             &:active, &:hover {
                 outline: none;
@@ -32,6 +40,7 @@
     .home-content {
         .section {
             margin-top: 25px;
+            margin-bottom: 25px;
             .card {
                 width: 40%;
                 min-width: 400px;
@@ -43,18 +52,20 @@
             width: 100%;
             overflow-x: auto;
             justify-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
 
             .linkedin-link {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
                 border-radius: 50%;
                 margin-left: 10px;
                 margin-right: 10px;
             }
 
             .github-link {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
                 border-radius: 50%;
                 margin-left: 10px;
                 margin-right: 10px;

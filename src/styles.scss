@@ -7,6 +7,32 @@ body {
     margin: 0px;
 }
 
+.small-font {
+    font-size: 1.25em;
+    &.subheader {
+        font-weight: bolder;
+    }
+}
+
+.med-font {
+    font-size: 1.5em;
+}
+
+.large-font {
+    font-size: 2em;
+}
+
+p-card {
+    box-shadow: -0.2em 0.2rem 0.1em 0.3em rgba(0, 0, 0, 0.75);
+}
+
+p-menu .p-menu.p-menu-overlay {
+    background: url('./assets/OldNewsPaper.jpg');
+    .p-menuitem-icon, .p-menuitem-text {
+        color: black;
+    }
+}
+
 // Mobile
 @media (min-width: 300px) and (max-width: 500px) {
     .fontSize {

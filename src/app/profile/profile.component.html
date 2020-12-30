@@ -1,12 +1,19 @@
 <div class="profile-page">
     <!-- menubar -->
-    <div class="menubar">
-        <button pButton label="Home" icon="pi pi-home"></button>
-        <button pButton label="Profile" icon="pi pi-info-circle"></button>
-        <button pButton label="Experience" icon="pi pi-info-circle"></button>
-        <button pButton label="Education"></button>
-        <button pButton label="Projects"></button>
+    <div *ngIf="fullBar" class="menubar">
+        <button pButton label="Home" icon="pi pi-home" (click)="clickHome()"></button>
+        <button pButton label="Profile" icon="pi pi-user" (click)="scrollTo('main')"></button>
+        <button pButton label="Experience" icon="pi pi-id-card" (click)="scrollTo('experience')"></button>
+        <button pButton label="Education" icon="pi pi-pencil" (click)="scrollTo('education')"></button>
+        <button pButton label="Projects" icon="pi pi-folder" (click)="scrollTo('projects')"></button>
+        <button pButton label="Contact" (click)="scrollTo('contact')"></button>
     </div>
+    <div *ngIf="!fullBar" class="menubar">
+        <button pButton label="Home" icon="pi pi-home" (click)="clickHome()"></button>
+        <button type="button" pButton icon="pi pi-bars" label="ScrollTo" (click)="menu.toggle($event)"></button>
+        <button pButton label="Contact" (click)="scrollTo('contact')"></button>
+    </div>
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
     <!-- content -->
     <div class="home-content">
         <app-main></app-main>
@@ -14,7 +21,7 @@
         <app-education></app-education>
         <app-projects></app-projects>
 
-        <section class="section links">
+        <section id="contact" class="section links">
             <a href="https://www.linkedin.com/in/arjun-d-patel">
                 <img class="linkedin-link" src="./../../assets/linkedin.svg">
             </a>

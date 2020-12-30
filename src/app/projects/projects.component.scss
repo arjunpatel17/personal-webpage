@@ -1,19 +1,34 @@
 .section {
-    margin-top: 25px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    min-height: 750px;
+    align-items: center;
+
     .card {
         width: 40%;
         min-width: 400px;
+        
+        ::ng-deep.p-card {
+            background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center !important;
+            background-size: cover !important;
+            color: white;
+        }
     }
 }
 
 .projects {
     display: flex;
-    width: 100%;
     overflow-x: auto;
     justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
 
     .card {
         margin-right: 25px;
         min-width: 400px;
+
+        .pfooter {
+            justify-content: center;
+        }
     }
 }

@@ -18,17 +18,11 @@
         button {
             color: black;
             background: none;
-            border-color: black;
-            border-width: 2px;
-            border-style: solid;
+            border: none;
 
-            &:active, &:hover {
+            &:active, &:hover, &:focus {
                 outline: none;
                 box-shadow: none;
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295);
             }
         }
     }
