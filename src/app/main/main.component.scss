@@ -3,10 +3,12 @@
     margin-bottom: 100px;
     min-height: 600px;
     align-items: center;
+    overflow-y: hidden;
 
     .card {
         width: 40%;
         min-width: 400px;
+        transform: translateY(500px);
 
         ::ng-deep.p-card {
             background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center !important;
@@ -32,8 +34,8 @@
         margin-right: auto;
         justify-content: center;
         align-items: center;
-        background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center;
-        background-size: cover;
+        // background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center;
+        // background-size: cover;
         width: 75%;
     }
 }
@@ -46,5 +48,23 @@
 @media (min-width: 871px) and (max-width: 5000px) {
     .profile {
         justify-content: space-around;
+    }
+}
+
+.come-in {
+    transform: translateY(500px);
+    animation: come-in 1.5s ease forwards;
+}
+.come-in:nth-child(odd) {
+    animation-duration: 0.75s; /* So they look staggered */
+}
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+@keyframes come-in {
+    to { 
+        visibility: visible;
+        transform: translateY(0); 
     }
 }

@@ -6,6 +6,41 @@
     overflow-x: hidden;
     overflow-y: auto;
 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: none !important;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 6px !important;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    &.on-scrollbar{
+        scrollbar-width: thin; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+    }
+
+    &.on-scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: none !important;
+        background-color: transparent !important;
+    }
+
+    &.on-scrollbar::-webkit-scrollbar {
+        width: 6px !important;
+        background-color: transparent;
+    }
+
+    &.on-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #acacac;
+        border-radius: 10px !important;
+    }
+
     .menubar {
         position: fixed; 
         display: flex;
@@ -15,11 +50,13 @@
         background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center;
         background-size: cover;
         align-items: center;
+        z-index: 1;
 
         button {
             color: black;
-            background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center !important;
-            background-size: cover;
+            // background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center !important;
+            // background-size: cover;
+            background: #EFEFEF;
             color: black;
             border-color: black;
             border-width: 2px;
@@ -54,6 +91,7 @@
             justify-content: center;
             margin-left: 10px;
             margin-right: 10px;
+            overflow-y: hidden;
 
             .linkedin-link {
                 width: 64px;
@@ -71,5 +109,25 @@
                 margin-right: 10px;
             }
         }
+    }
+}
+
+
+.come-in {
+    transform: translateY(250px);
+    animation: come-in 1.5s ease forwards;
+}
+.come-in:nth-child(odd) {
+    animation-duration: 0.75s; /* So they look staggered */
+}
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+@keyframes come-in {
+    from { transform: translateY(250px); }
+    to { 
+        visibility: visible;
+        transform: translateY(0); 
     }
 }

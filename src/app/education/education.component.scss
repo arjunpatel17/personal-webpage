@@ -3,10 +3,12 @@
     margin-bottom: 100px;
     min-height: 300px;
     align-items: center;
+    overflow-y: hidden;
 
     .card {
         width: 40%;
         min-width: 400px;
+        transform: translateY(250px);
 
         ::ng-deep.p-card {
             background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center !important;
@@ -59,5 +61,24 @@
 @media (min-width: 871px) and (max-width: 5000px) {
     .education {
         justify-content: space-around;
+    }
+}
+
+.come-in {
+    transform: translateY(250px);
+    animation: come-in 1.5s ease forwards;
+}
+.come-in:nth-child(odd) {
+    animation-duration: 0.75s; /* So they look staggered */
+}
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+@keyframes come-in {
+    from { transform: translateY(250px); }
+    to { 
+        visibility: visible;
+        transform: translateY(0); 
     }
 }

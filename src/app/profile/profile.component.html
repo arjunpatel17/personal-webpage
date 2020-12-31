@@ -1,4 +1,4 @@
-<div class="profile-page">
+<div class="profile-page" (scroll)="onWindowScroll($event)">
     <!-- menubar -->
     <div *ngIf="fullBar" class="menubar">
         <button pButton label="Home" icon="pi pi-home" (click)="clickHome()"></button>

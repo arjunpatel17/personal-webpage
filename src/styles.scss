@@ -7,6 +7,23 @@ body {
     margin: 0px;
 }
 
+div * {
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: none !important;
+        background-color: transparent !important;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px !important;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #acacac;
+        border-radius: 6px !important;
+    }
+}
+
 .small-font {
     font-size: 1.25em;
     &.subheader {
@@ -27,7 +44,7 @@ p-card {
 }
 
 p-menu .p-menu.p-menu-overlay {
-    background: url('./assets/OldNewsPaper.jpg');
+    background: white;
     .p-menuitem-icon, .p-menuitem-text {
         color: black;
     }

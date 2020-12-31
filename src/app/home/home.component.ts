@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,11 +6,17 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent{
+export class HomeComponent implements AfterViewInit{
 
   showChild: boolean = false;
 
   constructor(private router: Router) { }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.onParentClick();
+    }, 1000);
+  }
 
   onParentClick() {
     this.showChild = true;
