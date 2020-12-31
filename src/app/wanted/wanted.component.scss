@@ -6,19 +6,26 @@
     background-image: url("../../assets/WantedPage.jpg");
     background-position: center;
     background-size: cover;
+    display: grid;
+    grid-template-rows: 30% 25% 35% 10%;
+    grid-template-columns: auto;
+
+    .profile-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .buttonDiv {
         display: flex;
         height: 40px;
         justify-content: center;
-        top: 75%;
-        left: 1%;
-        position: relative;
 
         button {
-            color: black;
+            color: white;
             background: none;
             border: none;
+            font-size: 1em;
 
             &:active, &:hover, &:focus {
                 outline: none;

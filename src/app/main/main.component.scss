@@ -25,6 +25,17 @@
     .card {
         margin-right: 25px;
     }
+
+    .profile-pic {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center;
+        background-size: cover;
+        width: 75%;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 870px) {
