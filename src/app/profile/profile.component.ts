@@ -1,30 +1,29 @@
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { takeUntil } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { ThemingService } from '../theming.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit, AfterViewInit {
+export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  _unsubscribe: Subject<any> = new Subject();
   fullBar: boolean = false;
   items: MenuItem[];
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if (event && event.target && event.target.innerWidth) {
-      this.fullBar = event.target.innerWidth > 768;
-    }
-  }
-
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private themingService: ThemingService) { }
 
   ngOnInit(): void {
-    if (document && document.body && document.body.clientWidth) {
-      this.fullBar = document.body.clientWidth > 768;
-    }
+    this.themingService.clientSize$.pipe(takeUntil(this._unsubscribe)).subscribe((size) => {
+      this.fullBar = size === 'Small' || size === 'Med' || size === 'Large';
+    });
+    
     this.items = [
       { label: 'Profile', icon: 'pi pi-user',
         command: () => {
@@ -60,6 +59,11 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     }, 0)
   }
 
+  ngOnDestroy() {
+    this._unsubscribe.next();
+    this._unsubscribe.complete();
+  }
+
   clickHome() {
     this.router.navigate(['/home', {}]);
   }
@@ -83,7 +87,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       this.visible(document.getElementById('experience'));
       this.visible(document.getElementById('education'));
       this.visible(document.getElementById('projects'));
-      this.visible(document.getElementById('contact'));
+      // this.visible(document.getElementById('contact'));
     }, 0);
   }
 
@@ -97,20 +101,17 @@ export class ProfileComponent implements OnInit, AfterViewInit {
 
   visible(ele): boolean {
     let bounding = ele.getBoundingClientRect();
-    if (
+    if ((
       bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
-      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      bounding.bottom <= ((window.innerHeight*1.25) || (document.documentElement.clientHeight*1.25))) 
+      || ((bounding.height > window.innerHeight) || 
+      (bounding.height > document.documentElement.clientHeight))
     ) {
       for (let i = 0; i < ele.children.length; i++) {
         ele.children[i].classList.add("come-in");
       }
       return true;
     } else {
-      // for (let i = 0; i < ele.children.length; i++) {
-      //   ele.children[i].classList.remove("come-in");
-      // }
       return false;
     }
 
