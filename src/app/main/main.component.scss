@@ -3,6 +3,8 @@
     align-items: center;
     overflow-y: hidden;
     background-color: transparent;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     .card {
         // width: 40%;
@@ -11,6 +13,11 @@
 
         ::ng-deep.p-card {
             color: #434B56;
+            font-family: 'Raleway', 'sans-serif';
+        }
+
+        ::ng-deep fieldset {
+            font-family: 'Raleway', 'sans-serif';
         }
     }
 }
@@ -177,6 +184,18 @@
         }
     }
 
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 950px) {

@@ -1,9 +1,10 @@
 .section-alt {
-    margin-bottom: 50px;
     min-height: 600px;
     align-items: center;
     // overflow-y: hidden;
     // background-color:  #4cabb1;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     .card {
         width: 40%;
@@ -15,6 +16,7 @@
         ::ng-deep.p-card {
             background-color: rgba(73, 80, 87, 1);
             color: rgba(255, 255, 255, 1);
+            font-family: 'Raleway', 'sans-serif';
         }
     }
 }
@@ -36,6 +38,18 @@
             display: flex;
             justify-content: center;
         }
+    }
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
     }
 }
 

@@ -2,6 +2,8 @@
     min-height: 500px;
     overflow-y: hidden;
     // background-color:  #69c7ad;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     .card {
         // width: 40%;
@@ -11,6 +13,7 @@
         ::ng-deep.p-card {
             background-color: rgba(73, 80, 87, 1);
             color: rgba(255, 255, 255, 1);
+            font-family: 'Raleway', 'sans-serif';
         }
     }
 }
@@ -90,10 +93,95 @@
             }
         }
 
+        &.experience3 {
+            .Enercon-logo {
+                width: 48px;
+                height: 48px;
+                margin-right: 10px;
+                border-radius: 0%;
+            }
+            .skills-list {
+                display: flex;
+                width: 100%;
+                overflow: hidden;
+                justify-content: space-around;
+                margin-bottom: 10px;
+                align-items: center;
+                
+                .logo {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+
+                    &.circuit-logo {
+                        width: 64px;
+                        height: 64px;
+                        background-color: #ffffff;
+                    }
+
+                    &.etap-logo {
+                        border-radius: 0%;
+                    }
+
+                    &.skm-logo {
+                        border-radius: 0%;
+                    }
+                }
+            }
+        }
+
+        &.experience4 {
+            .GE-logo {
+                width: 48px;
+                height: 48px;
+                margin-right: 10px;
+                border-radius: 0%;
+            }
+            .skills-list {
+                display: flex;
+                width: 100%;
+                overflow: hidden;
+                justify-content: space-around;
+                margin-bottom: 10px;
+                align-items: center;
+                
+                .logo {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+
+                    &.mentor-logo {
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 0%;
+                        background-color: white;
+                    }
+
+                    &.xilinx-logo {
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 0%;
+                    }
+                }
+            }
+        }
+
         .icon-font-subheader {
             display: flex;
             align-items: center;
         }
+    }
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
     }
 }
 
