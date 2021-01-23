@@ -26,7 +26,7 @@ export class ThemingService {
       return 'Tablet';
     } else if (clientWidth < 1025) {
       return 'Small';
-    } else if (clientWidth < 2000) {
+    } else if (clientWidth < 1440) {
       return 'Med';
     } else {
       return 'Large';

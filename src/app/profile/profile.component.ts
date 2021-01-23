@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.themingService.clientSize$.pipe(takeUntil(this._unsubscribe)).subscribe((size) => {
-      this.fullBar = size === 'Med' || size === 'Large';
+      this.fullBar = size === 'Large';
       if (this.fullBar) {
         this.display = true;
         this.showCloseIcon = false;
