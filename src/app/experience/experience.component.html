@@ -1,39 +1,147 @@
-<section id="experience" class="section experience">
-    <p-card header="R&D Software Engineer" class="card experience1">
-        <div class="icon-font-subheader">
-            <img class="keysight-logo" src="./../../assets/Keysight.png">
-            <label class="small-font subheader">Keysight Technologies</label>
+<section id="experience" class="section-alt experience-alt">
+    <div *ngIf="fullSize" class="timeline-main">
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-circle"></div>
+                <!-- <div class="timeline-event-separator"></div> -->
+            </div>
+            <div class="timeline-right-content">
+                <label class="extra-small-font">Present</label>
+            </div>
         </div>
-        <ul>
-            <li>Full stack development of Web and Desktop based applications.</li>
-            <li>Angular based front-end applications.</li>
-            <li>Created Angular framework libraries and custom web components for reuse across embedded, desktop, and web applications.</li>
-            <li>Used KOA, Express architecture as REST API for Client-Server interface.</li>
-            <li>Agile development environment with GIT, Jenkins, and Atlassian toolsets.</li>
-        </ul>
-        <p-footer class="skills-list">
-            <img class="logo" src="./../../assets/Angular.svg">
-            <img class="logo node-logo" src="./../../assets/NodeJs.svg">
-            <img class="logo" src="./../../assets/C++.svg">
-            <img class="logo" src="./../../assets/Git.svg">
-            <img class="logo" src="./../../assets/Jenkins.svg">
-        </p-footer>
-    </p-card>
-    <p-card header="Graduate Research Assistant" class="card experience2">
-        <div class="icon-font-subheader">
-            <img class="GTRI-logo" src="./../../assets/GTRI_ATAS_Logo.png">
-            <label class="small-font subheader">Georgia Tech Research Institute</label>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+                <label class="extra-small-font">June 2017</label>
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content">
+                <p-card header="R&D Software Engineer" class="card experience1">
+                    <div class="icon-font-subheader">
+                        <img class="keysight-logo" src="./../../assets/Keysight.png">
+                        <label class="small-font subheader">Keysight Technologies</label>
+                    </div>
+                    <ul>
+                        <li>Full stack development of Web and Desktop based applications.</li>
+                        <li>Angular based front-end applications.</li>
+                        <li>Created Angular framework libraries and custom web components for reuse across embedded, desktop, and web applications.</li>
+                        <li>Used KOA, Express architecture as REST API for Client-Server interface.</li>
+                        <li>Agile development environment with GIT, Jenkins, and Atlassian toolsets.</li>
+                    </ul>
+                    <p-footer class="skills-list">
+                        <img class="logo" src="./../../assets/Angular.svg">
+                        <img class="logo node-logo" src="./../../assets/NodeJs.svg">
+                        <img class="logo" src="./../../assets/C++.svg">
+                        <img class="logo" src="./../../assets/Git.svg">
+                        <img class="logo" src="./../../assets/Jenkins.svg">
+                    </p-footer>
+                </p-card>
+            </div>
         </div>
-        <ul>
-            <li>Worked as a graduate research assistant at Aerospace, Transportation and Advanced Systems (ATAS) Laboratory under Dr. Alessio Medda.</li>
-            <li>Developed Digital Signals Processing (DSP) algorithms and DSP software architecture on noise reduction, cross correlation, beamforming, etc.</li>
-            <li>Worked with NI DAQs, DTS DAQs, LabVIEW, Signal Express, and Matlab for data gathering and coding.</li>
-        </ul>
-        <p-footer class="skills-list">
-            <img class="logo dsp-logo" src="./../../assets/DSP.svg">
-            <img class="logo labview-logo" src="./../../assets/LabVIEW.jpg">
-            <img class="logo" src="./../../assets/Matlab.png">
-            <img class="logo" src="./../../assets/national-instruments.svg">
-        </p-footer>
-    </p-card>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+                <p-card header="Graduate Research Assistant" class="card experience2">
+                    <div class="icon-font-subheader">
+                        <img class="GTRI-logo" src="./../../assets/GTRI_ATAS_Logo.png">
+                        <label class="small-font subheader">Georgia Tech Research Institute</label>
+                    </div>
+                    <ul>
+                        <li>Worked as a graduate research assistant at Aerospace, Transportation and Advanced Systems (ATAS) Laboratory under Dr. Alessio Medda.</li>
+                        <li>Developed Digital Signals Processing (DSP) algorithms and DSP software architecture on noise reduction, cross correlation, beamforming, etc.</li>
+                        <li>Worked with NI DAQs, DTS DAQs, LabVIEW, Signal Express, and Matlab for data gathering and coding.</li>
+                    </ul>
+                    <p-footer class="skills-list">
+                        <img class="logo dsp-logo" src="./../../assets/DSP.svg">
+                        <img class="logo labview-logo" src="./../../assets/LabVIEW.jpg">
+                        <img class="logo" src="./../../assets/Matlab.png">
+                        <img class="logo" src="./../../assets/national-instruments.svg">
+                    </p-footer>
+                </p-card>
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content">
+                <label class="extra-small-font">November 2015</label>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!fullSize" class="timeline-main-small">
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-circle"></div>
+                <div class="timeline-event-separator"></div>
+            </div>
+            <div class="timeline-right-content">
+                <label class="extra-small-font">Present</label>
+            </div>
+        </div>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content more-space-content">
+                <p-card header="R&D Software Engineer" class="card experience1">
+                    <div class="icon-font-subheader">
+                        <img class="keysight-logo" src="./../../assets/Keysight.png">
+                        <label class="small-font subheader">Keysight Technologies</label>
+                    </div>
+                    <ul>
+                        <li>Full stack development of Web and Desktop based applications.</li>
+                        <li>Angular based front-end applications.</li>
+                        <li>Created Angular framework libraries and custom web components for reuse across embedded, desktop, and web applications.</li>
+                        <li>Used KOA, Express architecture as REST API for Client-Server interface.</li>
+                        <li>Agile development environment with GIT, Jenkins, and Atlassian toolsets.</li>
+                    </ul>
+                    <p-footer class="skills-list">
+                        <img class="logo" src="./../../assets/Angular.svg">
+                        <img class="logo node-logo" src="./../../assets/NodeJs.svg">
+                        <img class="logo" src="./../../assets/C++.svg">
+                        <img class="logo" src="./../../assets/Git.svg">
+                        <img class="logo" src="./../../assets/Jenkins.svg">
+                    </p-footer>
+                </p-card>
+                <label class="extra-small-font">June 2017</label>
+            </div>
+        </div>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content more-space-content">
+                <p-card header="Graduate Research Assistant" class="card experience2">
+                    <div class="icon-font-subheader">
+                        <img class="GTRI-logo" src="./../../assets/GTRI_ATAS_Logo.png">
+                        <label class="small-font subheader">Georgia Tech Research Institute</label>
+                    </div>
+                    <ul>
+                        <li>Worked as a graduate research assistant at Aerospace, Transportation and Advanced Systems (ATAS) Laboratory under Dr. Alessio Medda.</li>
+                        <li>Developed Digital Signals Processing (DSP) algorithms and DSP software architecture on noise reduction, cross correlation, beamforming, etc.</li>
+                        <li>Worked with NI DAQs, DTS DAQs, LabVIEW, Signal Express, and Matlab for data gathering and coding.</li>
+                    </ul>
+                    <p-footer class="skills-list">
+                        <img class="logo dsp-logo" src="./../../assets/DSP.svg">
+                        <img class="logo labview-logo" src="./../../assets/LabVIEW.jpg">
+                        <img class="logo" src="./../../assets/Matlab.png">
+                        <img class="logo" src="./../../assets/national-instruments.svg">
+                    </p-footer>
+                </p-card>
+                <label class="extra-small-font">November 2015</label>
+            </div>
+        </div>
+    </div>
 </section>

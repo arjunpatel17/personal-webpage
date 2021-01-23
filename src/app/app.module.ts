@@ -6,27 +6,28 @@ import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {MenubarModule} from 'primeng/menubar';
 import {MenuModule} from 'primeng/menu';
+import {SidebarModule} from 'primeng/sidebar';
+import {FieldsetModule} from 'primeng/fieldset';
+import {ProgressBarModule} from 'primeng/progressbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-import { WantedComponent } from './wanted/wanted.component';
 import { MainComponent } from './main/main.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { EntryComponent } from './entry/entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ProfileComponent,
-    WantedComponent,
     MainComponent,
     ExperienceComponent,
     EducationComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    EntryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +35,11 @@ import { ProjectsComponent } from './projects/projects.component';
     AppRoutingModule,
     ButtonModule,
     CardModule,
+    FieldsetModule,
     MenubarModule,
-    MenuModule
+    MenuModule,
+    ProgressBarModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

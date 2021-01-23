@@ -129,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "arjuns-profile"
+    }
+  },
+  "defaultProject": "arjuns-profile",
+  "cli": {
+    "analytics": "71d4593b-2d26-41ea-a038-304df6ef16b0"
+  }
 }

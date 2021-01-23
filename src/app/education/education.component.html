@@ -1,21 +1,111 @@
-<section id="education" class="section education">
-    <p-card class="card education1" header="M.S. Electrical and Computer Engineering">
-        <div class="icon-font-subheader">
-            <img class="GT-logo" src="./../../assets/GT.svg">
-            <label class="small-font subheader">Georgia Tech</label>
+<section id="education" class="section-alt education-alt">
+    <div *ngIf="fullSize" class="timeline-main">
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-circle"></div>
+                <!-- <div class="timeline-event-separator"></div> -->
+            </div>
+            <div class="timeline-right-content">
+                <label class="extra-small-font">May 2017</label>
+            </div>
         </div>
-        <ul>
-            <li>Graduated in 2017.</li>
-            <li>With specializations in Digital Signals Processing and Controls Systems.</li>
-        </ul>
-    </p-card>
-    <p-card class="card education2" header="B.S. Electrical Engineering">
-        <div class="icon-font-subheader">
-            <img class="GT-logo" src="./../../assets/GT.svg">
-            <label class="small-font subheader">Georgia Tech</label>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+                <label class="extra-small-font">December 2014</label>
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content">
+                <p-card class="card education1" header="M.S. Electrical and Computer Engineering">
+                    <div class="icon-font-subheader">
+                        <img class="GT-logo" src="./../../assets/GT.svg">
+                        <label class="small-font subheader">Georgia Tech</label>
+                    </div>
+                    <ul>
+                        <li>Graduated in 2017.</li>
+                        <li>With specializations in Digital Signals Processing and Controls Systems.</li>
+                    </ul>
+                </p-card>
+            </div>
         </div>
-        <ul>
-            <li>Graduated in 2014.</li>
-        </ul>
-    </p-card>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+                <p-card class="card education2" header="B.S. Electrical Engineering">
+                    <div class="icon-font-subheader">
+                        <img class="GT-logo" src="./../../assets/GT.svg">
+                        <label class="small-font subheader">Georgia Tech</label>
+                    </div>
+                    <ul>
+                        <li>Graduated in 2014.</li>
+                    </ul>
+                </p-card>
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content">
+                <label class="extra-small-font">December 2012</label>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!fullSize" class="timeline-main-small">
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-circle"></div>
+                <div class="timeline-event-separator"></div>
+            </div>
+            <div class="timeline-right-content">
+                <label class="extra-small-font">May 2017</label>
+            </div>
+        </div>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content more-space-content">
+                <p-card class="card education1" header="M.S. Electrical and Computer Engineering">
+                    <div class="icon-font-subheader">
+                        <img class="GT-logo" src="./../../assets/GT.svg">
+                        <label class="small-font subheader">Georgia Tech</label>
+                    </div>
+                    <ul>
+                        <li>Graduated in 2017.</li>
+                        <li>With specializations in Digital Signals Processing and Controls Systems.</li>
+                    </ul>
+                </p-card>
+                <label class="extra-small-font">December 2014</label>
+            </div>
+        </div>
+        <div class="timeline-row">
+            <div class="timeline-left-content">
+            </div>
+            <div class="timeline-separator">
+                <div class="timeline-event-separator"></div>
+                <div class="timeline-event-circle"></div>
+            </div>
+            <div class="timeline-right-content more-space-content">
+                <p-card class="card education2" header="B.S. Electrical Engineering">
+                    <div class="icon-font-subheader">
+                        <img class="GT-logo" src="./../../assets/GT.svg">
+                        <label class="small-font subheader">Georgia Tech</label>
+                    </div>
+                    <ul>
+                        <li>Graduated in 2014.</li>
+                    </ul>
+                </p-card>
+                <label class="extra-small-font">December 2012</label>
+            </div>
+        </div>
+    </div>
 </section>

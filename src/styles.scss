@@ -26,6 +26,13 @@ div * {
     }
 }
 
+.extra-small-font {
+    font-size: 1em;
+    &.subheader {
+        font-weight: bolder;
+    }
+}
+
 .small-font {
     font-size: 1.25em;
     &.subheader {
@@ -41,78 +48,142 @@ div * {
     font-size: 2em;
 }
 
-p-card {
-    box-shadow: -0.2em 0.2rem 0.1em 0.3em rgba(0, 0, 0, 0.75);
-}
-
-p-menu .p-menu.p-menu-overlay {
-    background: white;
-    .p-menuitem-icon, .p-menuitem-text {
-        color: black;
-    }
-}
-
 // Mobile
 @media (min-width: 300px) and (max-width: 500px) {
-    .fontSize {
-        font-size: 100%;
+    // .fontSize {
+    //     font-size: 100%;
+    // }
+
+    // .content {
+    //     width: 34%;
+    //     top: 38%;
+    //     left: 41%;
+    // }
+    
+    .dynamic-font-size {
+        font-size: 0.75em;
     }
 
-    .content {
-        width: 34%;
-        top: 38%;
-        left: 41%;
+    .dynamic-font-size-big {
+        font-size: 1.5em;
+    }
+
+    .dynamic-icon-size {
+        width: 36px;
+        height: 36px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 }
 
 // Tablet
 @media (min-width: 501px) and (max-width: 800px) {
-    .fontSize {
-        font-size: 100%;
+    // .fontSize {
+    //     font-size: 100%;
+    // }
+
+    // .content {
+    //     width: 27%;
+    //     top: 40%;
+    //     left: 43%;
+    // }
+
+    .dynamic-font-size {
+        font-size: 1em;
     }
 
-    .content {
-        width: 27%;
-        top: 40%;
-        left: 43%;
+    .dynamic-font-size-big {
+        font-size: 2em;
+    }
+
+    .dynamic-icon-size {
+        width: 36px;
+        height: 36px;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
 // Laptop Small
 @media (min-width: 801px) and (max-width: 1100px) {
-    .fontSize {
-        font-size: 100%;
+    // .fontSize {
+    //     font-size: 100%;
+    // }
+
+    // .content {
+    //     width: 27%;
+    //     top: 40%;
+    //     left: 43%;
+    // }
+
+    .dynamic-font-size {
+        font-size: 1.25em;
     }
 
-    .content {
-        width: 27%;
-        top: 40%;
-        left: 43%;
+    .dynamic-font-size-big {
+        font-size: 2.5em;
+    }
+
+    .dynamic-icon-size {
+        width: 48px;
+        height: 48px;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
 // Laptop Large
 @media (min-width: 1101px) and (max-width: 2000px) {
-    .fontSize {
-        font-size: 100%;
+    // .fontSize {
+    //     font-size: 100%;
+    // }
+
+    // .content {
+    //     width: 19%;
+    //     top: 40%;
+    //     left: 45%;
+    // }
+
+    .dynamic-font-size {
+        font-size: 1.5em;
     }
 
-    .content {
-        width: 19%;
-        top: 40%;
-        left: 45%;
+    .dynamic-font-size-big {
+        font-size: 3em;
+    }
+
+    .dynamic-icon-size {
+        width: 64px;
+        height: 64px;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
 // Laptop 4k
 @media (min-width: 2001px) and (max-width: 4100px) {
-    .fontSize {
-        font-size: 180%;
+    // .fontSize {
+    //     font-size: 180%;
+    // }
+
+    // .content {
+    //     width: 19%;
+    //     top: 31%;
+    //     left: 44%;
+    // }
+
+    .dynamic-font-size {
+        font-size: 1.5em;
     }
 
-    .content {
-        width: 19%;
-        top: 31%;
-        left: 44%;
+    .dynamic-font-size-big {
+        font-size: 3em;
+    }
+
+    .dynamic-icon-size {
+        width: 72px;
+        height: 72px;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }

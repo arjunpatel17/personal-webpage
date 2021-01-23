@@ -1,37 +1,55 @@
-.section {
-    margin-top: 100px;
+.section-alt {
     margin-bottom: 50px;
     min-height: 600px;
     align-items: center;
-    overflow-y: hidden;
+    // overflow-y: hidden;
+    // background-color:  #4cabb1;
 
     .card {
         width: 40%;
         min-width: 400px;
-        transform: translateY(500px);
+        margin-top: 25px;
+        margin-bottom: 25px;
+        // transform: translateY(500px);
         
         ::ng-deep.p-card {
-            background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center !important;
-            background-size: cover !important;
-            color: white;
+            color: #434B56;
         }
     }
 }
 
-.projects {
+.projects-alt {
     display: flex;
+    flex-wrap: wrap;
     overflow-x: auto;
-    justify-content: flex-start;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 8%;
+    margin-right: 8%;
 
     .card {
-        margin-right: 25px;
+        // margin-right: 25px;
         min-width: 400px;
 
-        .pfooter {
+        ::ng-deep.p-card-footer {
+            display: flex;
             justify-content: center;
         }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 525px) {
+    .projects {
+        justify-content: flex-start;
+    }
+    .projects-alt {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 526px) and (max-width: 5000px) {
+    .projects {
+        justify-content: flex-start;
+    }
+    .projects-alt {
+        justify-content: space-evenly;
     }
 }
 

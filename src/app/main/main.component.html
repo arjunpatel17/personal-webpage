@@ -1,19 +1,65 @@
-<section id="main" class="profile section">
-    <p-card class="card profile1">
-        <!-- Profile pic -->
-        <div class="profile-pic">
-            <img src="./../../assets/wanted_pencil_sketch.jpg" width="500px" height="550px">
+<section id="main" class="profile-alt section-alt">
+    <div class="profile-content">
+        <p-card class="card profile1">
+            <div class="profile-pic-div">
+                <div class="left-profile-pic">
+                </div>
+                <div class="center-profile-pic">
+                    <img src="./../../assets/background.jpg" width="100%" height="100%">
+                </div>
+                <div class="right-profile-pic">
+                    <img src="./../../assets/profilePic.png" width="100%" height="100%">
+                </div>
+            </div>
+        </p-card>
+    </div>
+    <div class="main-content">
+        <div class="card profile-summary">
+            <p-fieldset class="card profile2" legend="Who is he?">
+                <p class="extra-small-font">
+                    I am a <strong>Software Engineer</strong> working at Keysight Technologies for 3+ years.
+                    I have a passion designing <strong>Web</strong>, <strong>Desktop</strong>, and <strong>Embedded</strong> applications. 
+                    Apart from working as a software engineer, I also have a <strong>Electrical and Computer Engineering</strong>
+                    degree from <strong>GT</strong> with a background in <strong>Signal Processing</strong>
+                    and <strong>Hardware Engineering</strong>.
+                </p>
+                <p>
+                    A <strong>True Product Developer</strong>!
+                </p>
+            </p-fieldset>
+            <div class="summary">
+                <p-card class="med-font">
+                    <div class="card-info">
+                        <label class="dynamic-font-size">Experience</label>
+                        <label class="dynamic-font-size-big">3+</label>
+                        <label class="dynamic-font-size">Years</label>
+                    </div>
+                </p-card>
+                <p-card class="med-font">
+                    <div class="card-info">
+                        <label class="dynamic-font-size">Projects</label>
+                        <label class="dynamic-font-size-big">10+</label>
+                    </div>
+                </p-card>
+                <p-card class="med-font">
+                    <div class="card-info">
+                        <label class="dynamic-font-size">Education</label>
+                        <label class="dynamic-font-size-big">Masters</label>
+                        <label class="dynamic-font-size">Level</label>
+                    </div>
+                </p-card>
+            </div>
         </div>
-    </p-card>
-    <p-card class="card profile2">
-        <p class="med-font">
-            This is Arjun Patel. 
-            He has been working as a Software Engineer for Keysight Technologies 3+ years.
-            He has experience working as a full stack developer. Some of the technologies he
-            has worked with include Angular framework, C++, Nodejs, Express, KOA, etc.
-            Apart from working as a software engineer he also has background in Electrical
-            and Computer Engineering. He has earned a MS/BS in ECE from Georgia Tech with 
-            technical interest in Signal Processing. 
-        </p>
-    </p-card>
+        <div class="card skills">
+            <p-fieldset legend="Skills">
+                <div class="skills-list" *ngFor="let skill of skills">
+                    <div class="skill-info">
+                        <label>{{skill.name}}</label>
+                        <label>{{skill.value}}%</label>
+                    </div>
+                    <p-progressBar [showValue]="false" [value]="skill.value"></p-progressBar>
+                </div>
+            </p-fieldset>
+        </div>
+    </div>
 </section>

@@ -1,6 +1,5 @@
-.profile-page {
-    background: url(./../../assets/Oldwesttown.jpg) no-repeat top center fixed;
-    background-size: cover;
+.profile-page-alt {
+    background-color: rgba(50, 57, 64, 1);
     height: 100%;
     width: 100%;
     overflow-x: hidden;
@@ -42,36 +41,141 @@
     }
 
     .menubar {
-        position: fixed; 
         display: flex;
-        justify-content: space-around;
-        width: 100%;
-        height: 50px;
-        background: url(./../../assets/tileable-wood-texture.jpg) no-repeat top center;
-        background-size: cover;
+        justify-content: space-between;
+        width: calc(100% - 16%);
+        height: 100px;
         align-items: center;
-        z-index: 1;
+        margin-left: 8%;
+        margin-right: 8%;
 
         button {
-            color: black;
-            // background: url(./../../assets/OldNewsPaper.jpg) no-repeat top center !important;
-            // background-size: cover;
-            background: #EFEFEF;
-            color: black;
-            border-color: black;
-            border-width: 2px;
-            border-style: solid;
+            background-color: #495057;
+            color: #ffffff;
             height: 40px;
+        }
+    }
 
-            &:active, &:hover {
-                outline: none;
-                box-shadow: none;
+    .content {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .sidebar-content {
+        display: flex;
+
+        ::ng-deep.p-sidebar {
+            background-color: rgba(67, 75, 86, 1);
+            // width: 25%;
+            padding: 0px;
+            //mobile
+            @media (min-width: 300px) and (max-width: 500px) {
+                width: 60%;
+            }
+            // Tablet
+            @media (min-width: 501px) and (max-width: 800px) {
+                width: 50%;
+            }
+            // Laptop Small
+            @media (min-width: 801px) and (max-width: 1100px) {
+                width: 40%;
+            }
+            // Laptops Bigger
+            @media (min-width: 1101px) and (max-width: 4100px) {
+                width: 25%;
             }
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295);
+            .p-sidebar-content {
+                height: 100%;
+                overflow-y: auto;
             }
         }
+
+        .profile-avatar-section {
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            margin-left: 1rem;
+            margin-right:1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            .profile-avatar {
+                display: flex;
+                justify-content: center;
+                img {
+                    border-radius: 100%;
+                }
+            }
+            .profile-name {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+                color: #ffffff;
+                font-weight: bolder;
+            }
+            .profile-title {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 1rem;
+                color: #aaaaaa;
+            }
+        }
+
+        .profile-skills-section {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            margin-left: 1rem;
+            margin-right:1rem;
+            .section-name {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1rem;
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+                border: 1px solid;
+                cursor: pointer;
+            }
+        }
+
+        .contact-section {
+            padding-top: 1em;
+
+            .creator-label {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 10px;
+                font-weight: bold;
+            }
+    
+            .links {
+                display: flex;
+                width: 100%;
+                overflow-x: auto;
+                justify-content: center;
+                overflow-y: hidden;
+
+                .youtube-link {
+                    // border-radius: 50%;
+                }
+    
+                .linkedin-link {
+                    border-radius: 50%;
+                }
+    
+                .github-link {
+                    border-radius: 50%;
+                }
+            }
+        }
+
     }
 
     .home-content {
@@ -80,47 +184,16 @@
             margin-bottom: 25px;
             .card {
                 width: 40%;
-                min-width: 400px;
-            }
-        }
-
-        .creator-label {
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .links {
-            display: flex;
-            width: 100%;
-            overflow-x: auto;
-            justify-content: center;
-            margin-left: 10px;
-            margin-right: 10px;
-            overflow-y: hidden;
-
-            .linkedin-link {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-
-            .github-link {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                margin-left: 10px;
-                margin-right: 10px;
+                min-width: 380px;
             }
         }
     }
-}
 
+    .home-content-shift {
+        width: calc(100% - 25%);
+        margin-left: 25%;
+    }
+}
 
 .come-in {
     transform: translateY(250px);

@@ -4,59 +4,71 @@ import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { ThemingService } from '../theming.service';
 import { Subject } from 'rxjs';
+import { slideInAnimation } from '../animations';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
+  animations: [ slideInAnimation ]
 })
 export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
   _unsubscribe: Subject<any> = new Subject();
   fullBar: boolean = false;
   items: MenuItem[];
+  display: boolean = false;
+  modal: boolean = false;
+  showCloseIcon: boolean = false;
 
   constructor(private router: Router,
     private themingService: ThemingService) { }
 
   ngOnInit(): void {
     this.themingService.clientSize$.pipe(takeUntil(this._unsubscribe)).subscribe((size) => {
-      this.fullBar = size === 'Small' || size === 'Med' || size === 'Large';
+      this.fullBar = size === 'Med' || size === 'Large';
+      if (this.fullBar) {
+        this.display = true;
+        this.showCloseIcon = false;
+      } else {
+        this.display = false;
+        this.showCloseIcon = true;
+      }
     });
     
-    this.items = [
-      { label: 'Profile', icon: 'pi pi-user',
-        command: () => {
-          this.scrollTo('main');
-        }
-      },
-      { label: 'Experience', icon: 'pi pi-id-card',
-        command: () => {
-          this.scrollTo('experience');
-        }
-      },
-      { label: 'Education', icon: 'pi pi-pencil',
-        command: () => {
-          this.scrollTo('education');
-        }
-      },
-      { label: 'Projects', icon: 'pi pi-folder',
-        command: () => {
-          this.scrollTo('projects');
-        }
-      }
-    ];
+    // this.items = [
+    //   { label: 'Profile', icon: 'pi pi-user',
+    //     command: () => {
+    //       this.scrollTo('main');
+    //     }
+    //   },
+    //   { label: 'Experience', icon: 'pi pi-id-card',
+    //     command: () => {
+    //       this.scrollTo('experience');
+    //     }
+    //   },
+    //   { label: 'Education', icon: 'pi pi-pencil',
+    //     command: () => {
+    //       this.scrollTo('education');
+    //     }
+    //   },
+    //   { label: 'Projects', icon: 'pi pi-folder',
+    //     command: () => {
+    //       this.scrollTo('projects');
+    //     }
+    //   }
+    // ];
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      let main = document.getElementById('main');
-      for (let i = 0; i < main.children.length; i++) {
-        main.children[i].classList.add("come-in");
-      }
-      this.visible(document.getElementById('experience'));
-      this.visible(document.getElementById('education'));
-    }, 0)
+    // setTimeout(() => {
+    //   let main = document.getElementById('main');
+    //   for (let i = 0; i < main.children.length; i++) {
+    //     main.children[i].classList.add("come-in");
+    //   }
+    //   this.visible(document.getElementById('experience'));
+    //   this.visible(document.getElementById('education'));
+    // }, 0);
   }
 
   ngOnDestroy() {
@@ -66,6 +78,12 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
 
   clickHome() {
     this.router.navigate(['/home', {}]);
+  }
+
+  onClickTab(value: string) {
+    let route = `/profile/${value}`;
+    if (!this.fullBar) this.display = false;
+    this.router.navigate([route, {}])
   }
 
   scrollTo(where: string) {
@@ -83,10 +101,10 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     setTimeout(() => {
-      this.visible(document.getElementById('main'));
-      this.visible(document.getElementById('experience'));
-      this.visible(document.getElementById('education'));
-      this.visible(document.getElementById('projects'));
+      // this.visible(document.getElementById('main'));
+      // this.visible(document.getElementById('experience'));
+      // this.visible(document.getElementById('education'));
+      // this.visible(document.getElementById('projects'));
       // this.visible(document.getElementById('contact'));
     }, 0);
   }
@@ -115,5 +133,10 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
       return false;
     }
 
+  }
+
+  sidebarClick(event) {
+    console.log(event);
+    this.display = !this.display;
   }
 }
