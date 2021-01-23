@@ -15,13 +15,13 @@
                 <div class="profile-title dynamic-font-size">Full Stack Developer</div>
             </section>
             <section class="profile-skills-section">
-                <div class="section-name dynamic-font-size" (click)="onClickTab('main')">Skills</div>
-                <div class="section-name dynamic-font-size" (click)="onClickTab('experience')">Experience</div>
-                <div class="section-name dynamic-font-size" (click)="onClickTab('education')">Education</div>
-                <div class="section-name dynamic-font-size" (click)="onClickTab('projects')">Projects</div>
+                <div class="section-name dynamic-font-size" [ngClass]="{'section-active': activeTab === 'main'}" (click)="onClickTab('main')">Summary</div>
+                <div class="section-name dynamic-font-size" [ngClass]="{'section-active': activeTab === 'experience'}" (click)="onClickTab('experience')">Experience</div>
+                <div class="section-name dynamic-font-size" [ngClass]="{'section-active': activeTab === 'education'}" (click)="onClickTab('education')">Education</div>
+                <div class="section-name dynamic-font-size" [ngClass]="{'section-active': activeTab === 'projects'}" (click)="onClickTab('projects')">Projects</div>
             </section>
             <section class="contact-section section">
-                <div class="creator-label dynamic-font-size">Contact Me</div>
+                <div class="creator-label dynamic-font-size">Connect With Me</div>
                 <div class="link-icons links">
                     <a href="https://www.linkedin.com/in/arjun-d-patel">
                         <img class="linkedin-link dynamic-icon-size" src="./../../assets/linkedin.svg">
@@ -37,7 +37,7 @@
         </p-sidebar>
     </div>
     <div class="home-content" [ngClass]="{'home-content-shift': fullBar}">
-        <div [@routeAnimations]="o && o.activatedRouteData 
+        <div class="inside-home-content" [@routeAnimations]="o && o.activatedRouteData 
             && o.activatedRouteData['animation']">
             <router-outlet #o="outlet"></router-outlet>
         </div>

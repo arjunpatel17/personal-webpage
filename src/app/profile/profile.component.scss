@@ -135,11 +135,19 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 1rem;
-                padding-top: 0.25rem;
-                padding-bottom: 0.25rem;
-                border: 1px solid;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                // border: 1px solid;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.14);
+                }
+
+                &.section-active {
+                    background-color: rgba(50, 57, 64, 1);
+                    border-left: 0.5rem solid rgba(33, 150, 240, 1);
+                }
             }
         }
 
@@ -179,12 +187,14 @@
     }
 
     .home-content {
-        .section {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            .card {
-                width: 40%;
-                min-width: 380px;
+        .inside-home-content {
+            .section {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                .card {
+                    width: 40%;
+                    min-width: 380px;
+                }
             }
         }
     }

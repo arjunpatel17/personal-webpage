@@ -13,7 +13,8 @@
         // transform: translateY(500px);
         
         ::ng-deep.p-card {
-            color: #434B56;
+            background-color: rgba(73, 80, 87, 1);
+            color: rgba(255, 255, 255, 1);
         }
     }
 }
@@ -22,8 +23,10 @@
     display: flex;
     flex-wrap: wrap;
     overflow-x: auto;
+    // overflow-y: auto;
     margin-left: 8%;
     margin-right: 8%;
+    // height: 100%;
 
     .card {
         // margin-right: 25px;

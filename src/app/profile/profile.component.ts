@@ -6,6 +6,8 @@ import { ThemingService } from '../theming.service';
 import { Subject } from 'rxjs';
 import { slideInAnimation } from '../animations';
 
+export type Tabs = 'main' | 'experience' | 'education' | 'projects';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -20,6 +22,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
   display: boolean = false;
   modal: boolean = false;
   showCloseIcon: boolean = false;
+  activeTab: Tabs;
 
   constructor(private router: Router,
     private themingService: ThemingService) { }
@@ -34,6 +37,7 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
         this.display = false;
         this.showCloseIcon = true;
       }
+      this.activeTab = (this.router.url.split('/').pop()) as Tabs;
     });
     
     // this.items = [
@@ -80,7 +84,8 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
     this.router.navigate(['/home', {}]);
   }
 
-  onClickTab(value: string) {
+  onClickTab(value: Tabs) {
+    this.activeTab = value;
     let route = `/profile/${value}`;
     if (!this.fullBar) this.display = false;
     this.router.navigate([route, {}])
