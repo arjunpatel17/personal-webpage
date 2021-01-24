@@ -130,14 +130,14 @@
             align-items: center;
             flex-direction: column;
             .timeline-event-circle {
-                border: 2px solid #767676;
+                border: 2px solid #dee2e6;
                 width: 1rem;
                 height: 1rem;
                 border-radius: 50%;
             }
             .timeline-event-separator {
                 width: 2px;
-                background-color: #767676;
+                background-color: #dee2e6;
                 flex-grow: 1;
             }
         }
