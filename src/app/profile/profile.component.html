@@ -1,8 +1,9 @@
 <div class="profile-page-alt" (scroll)="onWindowScroll($event)">
-    <div *ngIf="fullBar" class="menubar">
-    </div>
     <div *ngIf="!fullBar" class="menubar">
-        <div></div>
+        <div class="title">
+            <label class="name dynamic-font-size-big">Arjun Patel</label>
+            <label class="position dynamic-font-size">Full Stack Developer</label>
+        </div>
         <button type="button" pButton icon="pi pi-bars" (click)="sidebarClick($event)"></button>
     </div>
     <div class="sidebar-content">
@@ -37,6 +38,8 @@
         </p-sidebar>
     </div>
     <div class="home-content" [ngClass]="{'home-content-shift': fullBar}">
+        <div *ngIf="fullBar" class="full-menubar">
+        </div>
         <div class="inside-home-content" [@routeAnimations]="o && o.activatedRouteData 
             && o.activatedRouteData['animation']">
             <router-outlet #o="outlet"></router-outlet>
