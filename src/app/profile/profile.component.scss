@@ -214,11 +214,11 @@
         height: calc(100% - 100px);
 
         .full-menubar {
-            height: 75px;
+            height: 100px;
         }
         .inside-home-content {
             padding-top: 2rem;
-            
+
             .section {
                 margin-top: 25px;
                 margin-bottom: 25px;
@@ -233,6 +233,7 @@
     .home-content-shift {
         width: calc(100% - 25%);
         margin-left: 25%;
+        height: 100%;
     }
 }
 
