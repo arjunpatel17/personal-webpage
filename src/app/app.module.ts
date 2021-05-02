@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
@@ -9,6 +11,8 @@ import {MenuModule} from 'primeng/menu';
 import {SidebarModule} from 'primeng/sidebar';
 import {FieldsetModule} from 'primeng/fieldset';
 import {ProgressBarModule} from 'primeng/progressbar';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputTextModule} from 'primeng/inputtext';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +22,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { EntryComponent } from './entry/entry.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,8 @@ import { EntryComponent } from './entry/entry.component';
     ExperienceComponent,
     EducationComponent,
     ProjectsComponent,
-    EntryComponent
+    EntryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -36,10 +42,14 @@ import { EntryComponent } from './entry/entry.component';
     ButtonModule,
     CardModule,
     FieldsetModule,
+    HttpClientModule,
     MenubarModule,
     MenuModule,
     ProgressBarModule,
-    SidebarModule
+    SidebarModule,
+    ReactiveFormsModule,
+    InputTextareaModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

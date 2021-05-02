@@ -1,0 +1,55 @@
+<section id="contact" class="section-alt contact-alt">
+    <p-fieldset class="contact-container" legend="Contact Arjun">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-container" formGroupName="userData">
+                <div>
+                    <label>Required* </label>
+                    <input type="text" pInputText class="form-control" [placeholder]="'Name'" id="name"
+                        formControlName="name" required/>
+                </div>
+
+                <div>
+                    <label>Required* </label>
+                    <input type="email" pInputText class="form-control" [placeholder]="'Email'" id="email"
+                        formControlName="email" required/>
+                </div>
+
+                <div>
+                    <label>Required* </label>
+                    <textarea class="textarea-field" pInputTextarea placeholder="Questions/Comments/Concerns"
+                        formControlName="description" required></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button pButton pRipple class="submit-button" type="submit" label="Submit" [disabled]="!contactForm.valid"></button>
+                    <button pButton pRipple class="reset-button" label="Reset" (click)="reset()"></button>
+                </div>
+            </div>
+        </form>
+    </p-fieldset>
+    <div class="info-icons">
+        <div class="link">
+            <img class="linkedin-link dynamic-icon-size" src="./../../assets/linkedin.svg">
+            <label class="med-font">linkedin.com/in/mr-arjun-patel</label>
+        </div>
+        <div class="link">
+            <img class="github-link dynamic-icon-size" src="./../../assets/github.svg">
+            <label class="med-font">github.com/arjunpatel17</label>
+        </div>
+        <div class="link">
+            <img class="youtube-link dynamic-icon-size" src="./../../assets/YouTube.svg">
+            <label class="med-font">youtube.com/channel/UCh39ErMMqBONgVBiYJ_q2uA</label>
+        </div>
+        <div class="link">
+            <img class="twitter-link dynamic-icon-size" src="./../../assets/twitter.svg">
+            <label class="med-font">twitter.com/MrArjunPatel</label>
+        </div>
+        <div class="link">
+            <img class="email-link dynamic-icon-size" src="./../../assets/email.svg">
+            <label class="med-font">mrarjundpatel@gmail.com</label>
+        </div>
+    </div>
+</section>
+<div class="footer">
+    <label>Arjun Patel ©2021</label>
+</div>

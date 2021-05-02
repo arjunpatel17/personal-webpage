@@ -1,0 +1,124 @@
+.section-alt {
+    min-height: 300px;
+    overflow-y: hidden;
+    // background-color: #fed586;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-x: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .contact-container {
+        width: 100%;
+        margin-bottom: 2rem;
+        // margin-left: 1rem;
+        margin-right: 1rem;
+
+        ::ng-deep fieldset {
+            background-color: transparent;
+            color: #ffffff;
+            
+            legend {
+                background-color: transparent;
+                color: #ffffff;
+            }
+        }
+
+        .form-container {
+            display: grid;
+            grid-gap: 1rem;
+            padding-bottom: 1rem;
+    
+            .form-control {
+                width: 100%;
+            }
+
+            .textarea-field {
+                height: 16rem;
+                width: 100%;
+            }
+
+            .form-buttons {
+                display: flex;
+                justify-content: space-around;
+
+                .submit-button {
+                    width: 8rem;
+                }
+                .reset-button {
+                    width: 8rem;
+                }
+            }
+        }
+    }
+    
+
+    .info-icons {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .link {
+            display: flex;
+            align-items: center;
+            padding-bottom: 1rem;
+
+            .med-font {
+                display: block;
+                color: #ffffff;
+                word-wrap: break-word;
+                width: calc(100% - 52px);
+            }
+        }
+    }
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 950px) {
+    .contact {
+        justify-content: flex-start;
+    }
+    .contact-alt {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 951px) and (max-width: 5000px) {
+    .contact {
+        justify-content: space-around;
+    }
+    .contact-alt {
+        justify-content: space-around;
+    }
+}
+
+.come-in-odd {
+    transform: scaleX(0);
+    animation: come-in 1s ease forwards;
+    transform-origin: 100% 50%;
+}
+.come-in-even {
+    transform: scaleX(0);
+    animation: come-in 1s ease forwards;
+    transform-origin: 0% 50%;
+}
+// .already-visible {
+//     transform: translateY(0);
+//     animation: none;
+// }
+@keyframes come-in {
+    to { 
+        visibility: visible;
+        transform: scaleX(1); 
+    }
+}

@@ -6,7 +6,7 @@ import { ThemingService } from '../theming.service';
 import { Subject } from 'rxjs';
 import { slideInAnimation } from '../animations';
 
-export type Tabs = 'main' | 'experience' | 'education' | 'projects';
+export type Tabs = 'main' | 'experience' | 'education' | 'projects' | 'contact';
 
 @Component({
   selector: 'app-profile',
@@ -141,7 +141,6 @@ export class ProfileComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   sidebarClick(event) {
-    console.log(event);
     this.display = !this.display;
   }
 }
