@@ -1,5 +1,6 @@
 # Stage 1: Build Angular app with Node.js
 FROM node:16.20.2-alpine AS build
+WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
